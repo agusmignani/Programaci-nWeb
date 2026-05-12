@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mis Películas Favoritas</title>
+</head>
+<body>
+    <header>
+        <h1>Mis Favoritos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Volver al Buscador</a></li>
+                <li><a href="fav.html">Mis Favoritos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="lista-favoritos">
+            <h2>Películas Guardadas</h2>
+            <ul>
+                <li>Erreway: 4 Caminos</li>
+                <li>Zootopia</li>
+                <li>Cars</li>
+            </ul>
+        </section>
+
+        <section id="contacto-novedades">
+            <h2>Recibir Novedades</h2>
+            <p>Déjanos tus datos para avisarte sobre nuevas películas:</p>
+            <form action="#" method="POST">
+                <label for="correo">Tu correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required placeholder="nombre@mail.com">
+                
+                <br><br>
+                <label for="fecha">Desde qué fecha quieres buscar:</label>
+                <input type="date" id="fecha" name="fecha">
+                
+                <br><br>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

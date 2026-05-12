@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Búsqueda de Películas</title>
+</head>
+<body>
+    <header>
+        <h1>Buscador de Películas</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="fav.html">Mis Favoritos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="formulario-busqueda">
+            <h2>Buscar Película</h2>
+            <form action="#" method="GET">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Ej: Son Como Niños">
+                <br><br>
+
+                <label>Filtros:</label>
+                <input type="checkbox" id="estreno" name="estreno">
+                <label for="estreno">Solo estrenos</label>
+                <input type="checkbox" id="4k" name="4k">
+                <label for="4k">Disponible en 4K</label>
+                <br><br>
+
+                <button type="submit">Buscar</button> 
+            </form>
+        </section>
+
+        <section id="lista-resultados">
+            <h2>Películas encontradas</h2>
+            <ul>
+                <li>
+                    <strong>Erreway: 4 Caminos</strong>
+                    <a href="detalle.html">Ver detalles de la película</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
