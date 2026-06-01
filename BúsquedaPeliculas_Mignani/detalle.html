@@ -11,48 +11,55 @@
         <h1>Detalle de la Película</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Volver al Buscador</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="fav.html">Mis Favoritos</a></li>
+                <li><a href="admin.html">Administración</a></li>
             </ul>
         </nav>
     </header>
     
-    <main>
-        <section id="info-pelicula">
-            <h2>Erreway: 4 Caminos</h2>
-            
-            <figure>
-                <img src="Erreway.jpg" alt="Foto de Erreway">
-            </figure>
-            
-            <p><strong>Descripción:</strong> Secuela de la serie Rebelde Way. Cuatro amigos (Mía, Marizza, Pablo y Manuel) dejan su vida cómoda para salir de gira en un motorhome, enfrentando la vida adulta, conflictos amorosos, un embarazo y la búsqueda de sus sueños.</p>
-            
-            <p><strong>Año:</strong> 2004</p>
-            <p><strong>Director:</strong> Ezequiel Crupnicoff</p>
-        </section>
+    <main class="detalle-layout">
+    
+    <section id="contenedor-detalle">
+        <h2 id="detalle-titulo">Cargando...</h2>
+        <figure><img id="detalle-imagen" src="" alt="Póster"></figure>
+        <p id="detalle-descripcion">Cargando...</p>
+    </section>
 
-        <section id="dejar-resena">
-            <h2>¡Danos tu opinión!</h2>
-            <form action="#" method="POST">
-                
-                <p>Puntaje:</p>
-                <input type="radio" id="estrella1" name="puntos" value="1">
-                <label for="estrella1">Mala</label>
-                <input type="radio" id="estrella2" name="puntos" value="2">
-                <label for="estrella2">Regular</label>
-                <input type="radio" id="estrella3" name="puntos" value="3">
-                <label for="estrella3">Muy buena</label>
-                
-                <br><br>
+    <section id="seccion-formulario-reseña">
+        <h3 id="titulo-form-reseña">Dejá tu Reseña</h3>
+        <form id="form-reseña">
+            <input type="hidden" id="index-reseña" value="">
 
-                <label for="edad">Tu edad:</label>
-                <input type="number" id="edad" name="edad" min="12" max="99">
+            <label>Edad recomendada:</label>
+            <input type="number" id="reseña-edad" placeholder="Ej: 13" required min="0">
+            <br><br>
 
-                <br><br>
+            <label>Puntaje / Calificación:</label>
+            <select id="reseña-puntaje" required>
+                <option value="" disabled selected>-- Seleccioná --</option>
+                <option value="Mala">Mala</option>
+                <option value="Regular">Regular</option>
+                <option value="Buena">Buena</option>
+            </select>
+            <br><br>
 
-                <button type="submit">Enviar Reseña</button>
-            </form>
-        </section>
-    </main>
+            <label>Tu comentario:</label>
+            <input type="text" id="reseña-texto" placeholder="Escribí qué te pareció..." required>
+            <br><br>
+
+            <button type="submit" id="btn-form-reseña" style="width: 100%;">Publicar Reseña</button>
+        </form>
+    </section>
+
+    <section id="seccion-lista-reseñas">
+        <h3>Comentarios</h3>
+        <ul id="ul-reseñas-interactivas">
+            </ul>
+    </section>
+
+</main>
+
+    <script src="detalle.js"></script>
 </body>
 </html>

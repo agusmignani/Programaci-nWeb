@@ -11,8 +11,9 @@
         <h1>Mis Favoritos</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Volver al Buscador</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="fav.html">Mis Favoritos</a></li>
+                <li><a href="admin.html">Administración</a></li>
             </ul>
         </nav>
     </header>
@@ -20,28 +21,29 @@
     <main>
         <section id="lista-favoritos">
             <h2>Películas Guardadas</h2>
-            <ul>
-                <li>Erreway: 4 Caminos</li>
-                <li>Zootopia</li>
-                <li>Cars</li>
-            </ul>
+            <ul id="ul-favoritos"></ul>
         </section>
 
         <section id="contacto-novedades">
-            <h2>Recibir Novedades</h2>
-            <p>Déjanos tus datos para avisarte sobre nuevas películas:</p>
-            <form action="#" method="POST">
-                <label for="correo">Tu correo electrónico:</label>
-                <input type="email" id="correo" name="correo" required placeholder="nombre@mail.com">
+            <h2>Agregar a Favoritos Rápido</h2>
+            <p>Seleccioná una película de la lista para añadirla a tus favoritos:</p>
+            
+            <form id="form-favoritos" action="#" method="POST">
+                <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #2c3e50;">
+                    Películas disponibles:
+                </label>
                 
-                <br><br>
-                <label for="fecha">Desde qué fecha quieres buscar:</label>
-                <input type="date" id="fecha" name="fecha">
+                <div class="custom-select-container">
+                    <div id="custom-select-trigger" class="custom-select-input">-- Elegí una película --</div>
+                    <ul id="custom-options-list" class="custom-options-hidden"></ul>
+                </div>
                 
-                <br><br>
-                <button type="submit">Suscribirse</button>
+                <br>
+                <button type="submit" style="width: 100%;">Guardar en Favoritos</button>
             </form>
         </section>
     </main>
+
+    <script src="fav.js"></script>
 </body>
 </html>

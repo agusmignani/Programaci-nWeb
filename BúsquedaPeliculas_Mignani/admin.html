@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Panel de Administración</title>
+</head>
+<body>
+    <header>
+        <h1>Panel de Administración</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="fav.html">Mis Favoritos</a></li>
+                <li><a href="admin.html">Administración</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="formulario-agregar">
+            <h2 id="titulo-form-admin">Agregar Película</h2>
+            <form id="form-admin">
+                <input type="hidden" id="index-peli" value="">
+                
+                <label for="input-peli" style="display: block; margin-bottom: 8px; font-weight: 600; color: #2c3e50;">
+                    Nombre de la película:
+                </label>
+                <input type="text" id="input-peli" placeholder="Ej: Shrek 5..." required>
+                
+                <br><br>
+                <button type="submit" id="btn-form-admin" style="width: 100%;">Agregar al Catálogo</button>
+            </form>
+        </section>
+
+        <section id="gestion-catalogo">
+            <h2>Catálogo Completo</h2>
+            <ul id="ul-catalogo"></ul>
+        </section>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

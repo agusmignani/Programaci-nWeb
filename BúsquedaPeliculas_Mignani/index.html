@@ -13,6 +13,7 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="fav.html">Mis Favoritos</a></li>
+                <li><a href="admin.html">Administración</a></li>
             </ul>
         </nav>
     </header>
@@ -20,9 +21,9 @@
     <main>
         <section id="formulario-busqueda">
             <h2>Buscar Película</h2>
-            <form action="#" method="GET">
+            <form id="form-busqueda" action="#" method="GET">
                 <label for="titulo">Título:</label>
-                <input type="text" id="titulo" name="titulo" placeholder="Ej: Son Como Niños">
+                <input type="text" id="titulo" name="titulo" placeholder="Ej: Erreway...">
                 <br><br>
 
                 <label>Filtros:</label>
@@ -36,15 +37,12 @@
             </form>
         </section>
 
-        <section id="lista-resultados">
-            <h2>Películas encontradas</h2>
-            <ul>
-                <li>
-                    <strong>Erreway: 4 Caminos</strong>
-                    <a href="detalle.html">Ver detalles de la película</a>
-                </li>
-            </ul>
+        <section class="resultados-busqueda">
+            <h2>Resultados de Búsqueda</h2>
+            <ul id="ul-resultados"></ul>
         </section>
     </main>
+
+    <script src="index.js"></script>
 </body>
 </html>
